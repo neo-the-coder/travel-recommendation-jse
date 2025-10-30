@@ -1,29 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Recommendation</title>
-</head>
-<body>
-    <nav>
-        <div>Logo</div>
-        <ul>
-            <li><a href="./index.html" id="home">Home</a></li>
-            <li><a href="/about-us.html" id="about">About us</a></li>
-            <li><a href="/contact-us" id="contact">Contact Us</a></li>
-        </ul>
-        <div class="search-container">
-            <input
-                class="search-input"
-                type="text"
-                id="search"
-                placeholder="Enter recommendation"
-            />
-            <span class="search-icon">Search-icon</span>
-            <button class="search-button-submit" id="btnSearch">Search</button>
-            <button class="search-button-reset" id="btnReset">Reset</button>
-        </div>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo-container">
+        <img
+          class="logo"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC9UlEQVR4nNWaW4hOURTHf66JMcYt5JpxKUlGubyQB01keBnkjXmZx/H2yZuioZQhL/MgHsjDeBCTp68UJUNoanIrw5TIMGMolxg52lpfHadz3d9Z33fOr9bbd9be/7PPXnuttT/IFzOBFuAScBfoBvaSI1YC54EfgONj+8nBCnQCowECSnaDDLMPGIwQULLbZJAZwLWYAkp2gYyxDHiWUIQjq5cZ1gHDFiK+AXVkhLXAkIUIY+fI+Uo4wC+g3s/pdOAg0Cjf64QMi3CAjqCY3ev5oYnfr4CixPMC0Aw0ALVVFjEoL/4/pgEPLJx9Ah4CXcBJoBXYBiwFxintCUdsj9epebM9ZTr1M5NOPJV86CzQBuwEtpe5Eg5wxe/tFBVEaFofMMVPSF8GJhfXhiUI+TJJUmGzMn8yMFknwEaA9cRkhWzawTyLcDMR2CXR6HdeRXiZDxwGXudZhJuxckZ0SWqQSxFe5gKHFCPeSCVEuBkDbAUuh9TTNraDKrI5xcDQVC0RJmy/S3FF2qohYjnwNuU9cqbSIhYDAwqbvbuSIhYpni1PKiViIdCvJMKRCGjOLVUWAC8VRThiJqNQY44US04FbIumCJvmmduSnDMtGiJmp5COfJYs4EPM3x8rZ8JLgHsKn4lpUmyQMU6XU5fHYRPwXkmEOwFcHfO5HiwwTeDvCiJMpbnGZ7z7MZ79mFTEEaVa3eReqwLGbI3pozaJkHIbZX72RhLJIMwEv8bw05BEyEbpoT5KKQ0fCGose7gYw1czltRIOXtU2kM/LUSYdmnc+iXKX4GUmCotzvYY9cYLSV+SVJfPI3x2okB7xKDzLHwWInwWFXT8W5mwQW3TnrCOTD8K1ETcd9tyPcTnqNZlU9gdii27I1a6HgVOKQgZH1HzN6JAk4IQw4kQvwdQoC7g0LRK8DydGL80qdfvnjAtHnsGu5XShf0dj18zziwU6XANdlUuitLAfEIlv+aC1fwnRRVTt3wBjsvpnBaTpR9w0+bq+y+0HkcXJ2+scQAAAABJRU5ErkJggg=="
+          alt="airport"
+        />
+        <span class="logo-text">TravelBloom</span>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a href="./travel_recommendation.html" id="home">Home</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/about-us.html" id="about">About us</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/contact-us" id="contact">Contact Us</a>
+        </li>
+      </ul>
+      <div class="search-container">
+        <input
+          class="search-input"
+          type="text"
+          id="search"
+          placeholder="Enter a destination or a keyword"
+        />
+        <svg
+          class="search-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+        >
+          <path
+            fill="currentColor"
+            d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+          ></path>
+        </svg>
+        <button class="search-button-submit" id="btnSearch">Search</button>
+        <button class="search-button-reset" id="btnReset">Clear</button>
+      </div>
     </nav>
-</body>
+
+    <main class="main">
+      <aside class="social">
+        <div class="social-line"></div>
+        <div class="social-container">
+          <img
+            class="social-item"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADUElEQVR4nO3aa6imQxwA8OesdVm3taFdLCmS225Wu6jNrXyRXIqy27aJOr7IF6JQiEJJoZSEQsklFBKK9UFu8cEl5S6r3GKx1m3x0/TOqadj7b7PZZ73eWp+n845H2bmP2dmnpn/TFFkWZZlWZZlWe9gJ5yBe/AOvsYfWI9XcBOOwVSFMucWfYe5mMaXxvM6Vm6jzGV4DIuqNmY1VjQNqkJ9e+El1f2DWzCnVNZuWFMq7/6qjZnCJ/gWh6QIeFZ9++FTzTyBq/Asfiv9fUMov2qDVpYK+AwHJAx+Z7wljTA6Vtdp1NWzCgpzckmiDrhVOheX6tkTJ4/bqEe3UFgYSie1HPxBcXVv24a4hi3B+XgKP2HpuA1b9z8F/4krygtOww64TRphxP46ayqsqdKwF7dRwQuVF5YtL7Sf68blVRv30BiFhiF1GXZoMPxTC//5S+o07soKlXyIs6tOC5wgrV+wqnLwAZbXqPAjXIRdijHgHGkdO047tjY/36tZ8Y94AGdh3lbqOF1ai4smjD4jTW3Ec7g+BrwY28Xyl0prUdMOmMLzCRq2OX6m3pTWro06IMDecSs8NH9XOSr/Rxyyy+LPB8YFbkjWF00YJR2CD3A3rouL21Csa9oBDxq2u5p2wLRhm27aAfskOqV15fBGHRDEuT9E3zX6AszA/vFcPTT3Fm3BqniiGpLTWuuAIKSVBtQJP2DHom04dyD7gJtbD35GyAyH+RXTYn30V9i1FikoHWvjie6aONz65OEkwQe4MSYZv4ipsL7ZnPQCx+hA1OeN0Z3Jgp+BG/R347OwSA3z8Jr+qX71VVdIM+F9/fF47WDqwoKY55u0kI7fo5gEo3zheS1cadf1M46YSPBlIcMbs713xCvu8JQltd9xatE32B7Xxh1ZKmEXembRNzgR70prU++Cxwo82cFpMdwjLC/6AAtxYYd7gpexbxeBzcFhMRO0IL7aOjje4oZXFrfH25xw6dCF8NDp0pmrtE7g6Njjk/YMDu0s8NlwyoS2va+O/ZCpCzg+XpKEb28qG+OT2OOKvsJ8rI1PTr9vIeivcF98zbl7MSRGi+VRuCC+8noab+ObUt5wU/z9Y7yBR+L9YnhzcGQrefssy7Isy7Kinn8B3DkNarhyHu0AAAAASUVORK5CYII="
+            alt="twitter"
+          />
+          <img
+            class="social-item"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA9ElEQVR4nO3ZMS5EYRSG4bMBkehMo7EXG9HrUNqEjj3o6CQjOqUpSGTUCgUNIh65oZ9rZu69Z37/s4O3+nJyIqp/CFvYxzke8erHM57wgFvc4BKHkQnWcYoPf/MZWWAbd+YUGWANk3kjGpEBji0ohoYR3koI2Vs0opEh5MwSxNBwv4SOcYaQZuRmef8dyFFkha8WIQeRnXY2IzstxCpQQ5JRQ3qGa90b9xHSh5dSQialhFyUEnJSSshRKSG7pYTs9BFy1XHEFBudh7QInSlWgRqSjBqSjBqSjBqSjBqSjBqSjBqSjBqSjBqSjNk3/fCPziq69w1oeelNke6xeQAAAABJRU5ErkJggg=="
+            alt="facebook-f"
+          />
+          <img
+            class="social-item"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEGElEQVR4nO2by29NQRzHD6Gk9X6sPEuCxGOv+AO8WmzERrz+AhZ2UjRR3Yh67rwiWKpFK8GqKo33Rm2oTdEQFlJp6/GR0V+Tm+bOnHPunZl7DvNZ3fScmd/3fHvOzG9eURQIBAKBQCAQCLgEmAhsAU4DXUA/MIx7hiWWitkCrAPGR1kBmAQcEpFZ4YNomlRpc7YB78guSltDJYwZBxwGfpF9fgPN3j47Rsy5Sv5Qmsf5MKiR/HLER5vzO0ZEO7APWAbUOBU0oqlGYu0HOmK0Ke31roRMjmmQXwF1ToKn06m6+R6Dzl4nvRsj3aaOe8C0KCMA04H7Br0HXSSB/YY3Z7rVgOm0VQEngfdAn/RYVWJSjyFPsterMZIh66joZyWGjKVZrq33ohto1QRptxakdG3qrRlLX8H1uxrtLTZFdGmC7CujzrnAXuAK8BT4LOOqYfn9RK7tAeaUYZDq3YrRWar2YiL6NUGWlVDXGuAWMERy1L03gdUJP7ETBdeXa+r8aMObvxgeZkqULl85U+bw5JfMFlQX1FslJvUVNtIF16dq6hpMqj3JwxUlRflFwEvs8RxY6Eu/0wDAfEnObPNW1e1af+QyADBBNYa4o1vlaHk26HjMA34BzgMbgVppp2rk9ya59jWmjqO5NAhYAvwwPNhlU/c9Jh1Q3b0OFaPWtn4fBp0zPFRTCRqaDPWdsa0/rbiiGO6fCXwvXorbpUxcyURdm6bOAWCGLf2pIWUAYIemiMqn5pWhY4FhpWSbLf0+DDqrKXLNgpbrmrpbben3YVC3pshOC1p2aep+ZEu/D4PeaYostqBF9Y7FeGtLvw+DBjRFqi1oqdbUPWBLf94NmqKp+5st/T4M6tUUqbWgZem/8Il1a4qERloh8z6+u/nTeTJouyFRTDRFUUKi2JAng2YYGuq2MoYadzR1DpiWnjJnUEw27WKw2hpTNpMG1cZMd6jdFnMTTndcM9TzIy4BzaRBCuAYZtRk2AVgs3TfoxNmS+VvFxNMmDVGMfzPU66dKkZuDSqYtFcT7LZ5k/tJ+1HUEg3wwqI5z1SXHyXEh0FDFhYOq2XRr5yFw5/AqTRjOl8Lh/0Wl55XyTJymqXnQeAGsLKEeF6WnrscbF6YDewGLgGPgU9i2pD8fizX1D2zyohzwMfmhRZNkI4o4/ja/rLO8PqvjzIKsMGge63NQONl21rmtuDFjAdfe9mCp1AbHw3/jftZMknMeeBtE2fBoRXTLo2eLHxu8lnp3hwkaXVzyAVoSLCRvEN6jhUeN5KvkJi6BnkUpX2ra0GN5Be3RxEU4TBLAgjHoRIbVe9oe50tep23OQl7t4OGPKkSfBBNlT2SWSSZrJNhyUM1GEw5IC2VQYnVKWc26jJ1qDcQCAQCgUAgEP2T/AE+VqvE6YouBQAAAABJRU5ErkJggg=="
+            alt="instagram-new"
+          />
+          <img
+            class="social-item"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABj0lEQVR4nO2Yu0oDQRSGg2hnZ+el1tjZ+Ba+gog+gIWXUqxFBcFg66XwESyCqGkEbU0qUewMAVFIiLpuPhmYYkmVnDm7WcL5YMv5Zz+YPXvOFAqGYRiGYRjGQAHmgW3gHCgDj0ANeAM+Ek9E70Rda11WzWeX/V5bQFFDYBQ4AToMjhgouXcJETkkP+xLJab7PCppEwGTEpE18seKROSC/HEmEbkjf9xIRFwplNLy1UabqkSkEbBhBVgAbtGlLhFpBmxYSeQsAc9KIl8SkbaGiM8aA9aBz0CRlkQk0hJJZE4AR8CfMPdHItLRFklkF4ErQW4sEYnTEvH5s8BLFiJRGiLAOLALfGd1tNqaIsAIsAy8Z/2xN7VEgEXgngGV30aoCDADXCrOM/WsW5QHYMe3Kpo8SUS02wsNriUibmYeijZ+lSEZrKZyNur+ikZdL3NAftgTSSSug0opDUm9EgPHQddBCaE5YBM49ZdnrrxWgdeuS7Z+fqLNrrUuq+qzy36vDdeTBQsYhmEYhmEYhRD+Ad88SoD0NCkDAAAAAElFTkSuQmCC"
+            alt="youtube-play"
+          />
+        </div>
+      </aside>
+      <div class="content">
+        <h1 class="hero-title">Explore Dream Destination</h1>
+        <p class="hero-desc">
+          Discover your next adventure with personalized travel recommendations,
+          hidden gems, and expert tips. Explore destinations that match your
+          style and make every journey unforgettable.
+        </p>
+        <button class="hero-action">Book now</button>
+      </div>
+    </main>
+  </body>
 </html>
