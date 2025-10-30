@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Recommendation</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./contact-us.css" />
   </head>
   <body>
     <nav class="nav">
@@ -80,13 +81,32 @@
         </div>
       </aside>
       <div class="content">
-        <h1 class="hero-title">Explore Dream Destination</h1>
-        <p class="hero-desc">
-          Discover your next adventure with personalized travel recommendations,
-          hidden gems, and expert tips. Explore destinations that match your
-          style and make every journey unforgettable.
-        </p>
-        <button class="hero-action">Book now</button>
+        <div class="content-heading">
+          <h1 class="hero-title">Contact us</h1>
+          <p class="hero-desc">Get in touch</p>
+        </div>
+        <form class="form">
+          <label for="name"
+            >Name
+            <input id="name" type="text" placeholder="Enter your name" />
+          </label>
+
+          <label for="email"
+            >Email
+            <input id="email" type="text" placeholder="Enter your email" />
+          </label>
+
+          <label for="message"
+            >Message
+            <textarea
+              id="message"
+              placeholder="Enter your message"
+              rows="7"
+            ></textarea>
+          </label>
+
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </main>
   </body>

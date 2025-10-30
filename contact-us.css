@@ -1,0 +1,57 @@
+/* Navigation */
+
+.search-container {
+  visibility: hidden;
+}
+
+/* Main */
+
+.main {
+  padding: 30px 15px 30px 150px;
+  min-height: calc(100vh - 50.5px - 30px - 30px);
+}
+
+/* Content */
+
+.content {
+  width: 100%;
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.hero-desc {
+  width: 100%;
+}
+
+/* Form */
+
+.form {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+
+.form label {
+  display: block;
+}
+
+.form input,
+.form textarea {
+  display: block;
+  margin: 20px 0;
+  background-color: transparent;
+  border: 1px solid #7e898c;
+  padding: 8px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: aliceblue;
+}
+
+.form button {
+  width: 100%;
+}
