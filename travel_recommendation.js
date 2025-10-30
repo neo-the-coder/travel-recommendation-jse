@@ -94,17 +94,93 @@ function createRecCard(title, desc, imageUrl) {
   return recCard;
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-  // Set up local time
-  setInterval(localTime, 1000);
+function addRecs(recs) {
   const recsEl = document.getElementById("recommendations");
 
-  // Get recommendations
-  const recs = await getRecommendations();
-  console.log(recs);
   recs.forEach((rec) => {
     const { title, desc, imageUrl } = rec;
     const recEl = createRecCard(title, desc, imageUrl);
     recsEl.appendChild(recEl);
+  });
+}
+
+async function search(keyword) {
+  clear();
+  try {
+    const recs = await fetch("travel_recommendation_api.json");
+    const db = await recs.json();
+
+    const result = [];
+
+    switch (keyword) {
+      case "country":
+      case "countries":
+        db.countries.forEach((country) => {
+          country.cities.forEach((city) => {
+            result.push({
+              title: city.name,
+              imageUrl: city.imageUrl,
+              desc: city.description,
+            });
+          });
+        });
+        break;
+      case "temple":
+      case "temples":
+        db.temples.forEach((temple) => {
+          result.push({
+            title: temple.name,
+            imageUrl: temple.imageUrl,
+            desc: temple.description,
+          });
+        });
+        break;
+      case "beaches":
+      case "beach":
+        db.beaches.forEach((beach) => {
+          result.push({
+            title: beach.name,
+            imageUrl: beach.imageUrl,
+            desc: beach.description,
+          });
+        });
+        break;
+    }
+
+    addRecs(result);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function clear() {
+  const recsEl = document.getElementById("recommendations");
+  recsEl.innerHTML = "";
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  // Set up local time
+  localTime();
+  setInterval(localTime, 1000);
+
+  // Get recommendations
+  const recs = await getRecommendations();
+  addRecs(recs);
+
+  // Search
+  const searchBtn = document.getElementById("btnSearch");
+  searchBtn.addEventListener("click", () => {
+    const keyword = document.getElementById("search").value.trim();
+    if (keyword) {
+      search(keyword);
+    }
+  });
+
+  // Clear Search
+  const clearBtn = document.getElementById("btnReset");
+  clearBtn.addEventListener("click", () => {
+    clear();
+    document.getElementById("search").value = "";
+    addRecs(recs);
   });
 });
