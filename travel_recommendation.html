@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Recommendation</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="/travel_recommendation.js"></script>
   </head>
   <body>
     <nav class="nav">
@@ -79,14 +80,295 @@
           />
         </div>
       </aside>
-      <div class="content">
-        <h1 class="hero-title">Explore Dream Destination</h1>
-        <p class="hero-desc">
-          Discover your next adventure with personalized travel recommendations,
-          hidden gems, and expert tips. Explore destinations that match your
-          style and make every journey unforgettable.
-        </p>
-        <button class="hero-action">Book now</button>
+
+      <svg
+        class="main-dots"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:svgjs="http://svgjs.dev/svgjs"
+        viewBox="0 0 800 800"
+        opacity="1"
+        width="800"
+        height="800"
+        style="height: 300px; width: 300px"
+      >
+        <g stroke-width="10" stroke="hsla(261, 3%, 98%, 1.00)" fill="none">
+          <circle
+            r="12.5"
+            cx="114.28571428571429"
+            cy="114.28571428571429"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="228.57142857142858"
+            cy="114.28571428571429"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="342.8571428571429"
+            cy="114.28571428571429"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="457.14285714285717"
+            cy="114.28571428571429"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="571.4285714285714"
+            cy="114.28571428571429"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="685.7142857142858"
+            cy="114.28571428571429"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+
+          <circle
+            r="12.5"
+            cx="114.28571428571429"
+            cy="228.57142857142858"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="228.57142857142858"
+            cy="228.57142857142858"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="342.8571428571429"
+            cy="228.57142857142858"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="457.14285714285717"
+            cy="228.57142857142858"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="571.4285714285714"
+            cy="228.57142857142858"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="685.7142857142858"
+            cy="228.57142857142858"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+
+          <circle
+            r="12.5"
+            cx="114.28571428571429"
+            cy="342.8571428571429"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="228.57142857142858"
+            cy="342.8571428571429"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="342.8571428571429"
+            cy="342.8571428571429"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="457.14285714285717"
+            cy="342.8571428571429"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="571.4285714285714"
+            cy="342.8571428571429"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="685.7142857142858"
+            cy="342.8571428571429"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+
+          <circle
+            r="12.5"
+            cx="114.28571428571429"
+            cy="457.14285714285717"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="228.57142857142858"
+            cy="457.14285714285717"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="342.8571428571429"
+            cy="457.14285714285717"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="457.14285714285717"
+            cy="457.14285714285717"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="571.4285714285714"
+            cy="457.14285714285717"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="685.7142857142858"
+            cy="457.14285714285717"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+
+          <circle
+            r="12.5"
+            cx="114.28571428571429"
+            cy="571.4285714285714"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="228.57142857142858"
+            cy="571.4285714285714"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="342.8571428571429"
+            cy="571.4285714285714"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="457.14285714285717"
+            cy="571.4285714285714"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="571.4285714285714"
+            cy="571.4285714285714"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="685.7142857142858"
+            cy="571.4285714285714"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+
+          <circle
+            r="12.5"
+            cx="114.28571428571429"
+            cy="685.7142857142858"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="228.57142857142858"
+            cy="685.7142857142858"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="342.8571428571429"
+            cy="685.7142857142858"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="457.14285714285717"
+            cy="685.7142857142858"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="571.4285714285714"
+            cy="685.7142857142858"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+          <circle
+            r="12.5"
+            cx="685.7142857142858"
+            cy="685.7142857142858"
+            fill="hsla(261, 3%, 98%, 1.00)"
+            stroke="none"
+          ></circle>
+        </g>
+      </svg>
+
+      <div class="container">
+        <div class="content">
+          <h1 class="hero-title">Explore Dream Destination</h1>
+          <p class="hero-desc">
+            Discover your next adventure with personalized travel
+            recommendations, hidden gems, and expert tips. Explore destinations
+            that match your style and make every journey unforgettable.
+          </p>
+          <button class="hero-action">Book now</button>
+        </div>
+
+        <article>
+          <div class="time">Current time: <time id="current-time"></time></div>
+          <div id="recommendations"></div>
+        </article>
       </div>
     </main>
   </body>
