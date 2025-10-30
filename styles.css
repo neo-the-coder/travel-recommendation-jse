@@ -5,6 +5,10 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -121,7 +125,7 @@ button:hover {
 .content {
   position: relative;
   z-index: 1;
-  width: 400px;
+  width: 450px;
 }
 
 .hero-title {
